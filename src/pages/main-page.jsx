@@ -1,4 +1,5 @@
 import Header from '../components/header/header';
+import Card from '../components/card/card';
 
 function MainPage() {
   return (
@@ -72,7 +73,7 @@ function MainPage() {
               Nullam scelerisque aliquam odio et faucibus.
             </p>
           </div>
-          <div className="flex flex-row gap-16 py-10">
+          <div className="flex flex-row flex-wrap gap-16 py-10">
             <div>
               <img src="/src/assets/img.png" alt="Image" />
             </div>
@@ -82,12 +83,12 @@ function MainPage() {
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   STELLAR LOCATIONS
                 </h5>
-                <p className='className="text-gray-600/90 font-normal tracking-normal"'>
+                <p className="text-gray-600/90 font-normal tracking-normal">
                   Lorem ipsum dolor sit amet, <br /> consectetur adipiscing
                   elit.
                 </p>
               </div>
-              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200">
                 <img src="/src/assets/icon2.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   HIGH QUALITY BUILDS
@@ -102,12 +103,45 @@ function MainPage() {
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   EXPERT INTERIOR DESIGN
                 </h5>
-                <p className='className="text-gray-600/90 font-normal tracking-normal"'>
+                <p className="text-gray-600/90 font-normal tracking-normal">
                   Lorem ipsum dolor sit amet, <br /> consectetur adipiscing
                   elit.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="h-[700px]">
+        <div
+          className="bg-cover bg-no-repeat w-full h-full"
+          style={{
+            backgroundImage: "url('/src/assets/background-middle.png')",
+          }}
+        ></div>
+      </section>
+      <section className="px-20 py-12 bg-gray-100/90">
+        <div className="">
+          <div className="w-[600px]">
+            <h4 className="text-orange-600 tracking-wide font-normal">
+              CURRENT LISTINGS
+            </h4>
+            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+              What we have in store for you.
+            </p>
+            <p className="py-4 text-gray-600/90 font-normal tracking-normal">
+              Morbi neque ex, condimentum dapibus congue et, vulputate ut
+              ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et
+              nisi ultrices, ut faucibus orci tincidunt.
+            </p>
+          </div>
+          <div className="py-4 flex flex-row flex-wrap justify-center gap-8">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
       </section>
