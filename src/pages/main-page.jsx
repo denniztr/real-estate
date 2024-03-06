@@ -31,7 +31,7 @@ function MainPage() {
             <h5 className="text-sm text-orange-600 tracking-wide font-semibold">
               OUR GOAL
             </h5>
-            <p className="text-gray-800/90 text-5xl tracking-wide ">
+            <p className="text-gray-800/90 text-5xl tracking-wide">
               We are dedicated <br /> to finding a house <br /> that you will
               love.
             </p>
@@ -48,8 +48,66 @@ function MainPage() {
                 erat. Aenean faucibus nibh et justo cursus id rutrum lorem
                 imperdiet. Nunc ut sem vitae risus tristique posuere.
               </p>
+              <p>
+                Interdum nulla, ut commodo diam libero vitae erat. Aenean
+                faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
+                sem vitae risus tristique posuere.
+              </p>
             </div>
             <div>Avatarka</div>
+          </div>
+        </div>
+      </section>
+      <section className="px-28 py-20">
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h5 className="text-orange-600 tracking-wide font-normal">
+              OUR REQUIREMENTS
+            </h5>
+            <p className="text-gray-800/90 md:text-4xl text-md tracking-wide">
+              How we choose our listings.
+            </p>
+            <p className="py-4 text-xl text-gray-600/90 font-normal tracking-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />{' '}
+              Nullam scelerisque aliquam odio et faucibus.
+            </p>
+          </div>
+          <div className="flex flex-row gap-16 py-10">
+            <div>
+              <img src="/src/assets/img.png" alt="Image" />
+            </div>
+            <div className="flex flex-col justify-around">
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+                <img src="/src/assets/icon1.png" alt="Icon" />
+                <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
+                  STELLAR LOCATIONS
+                </h5>
+                <p className='className="text-gray-600/90 font-normal tracking-normal"'>
+                  Lorem ipsum dolor sit amet, <br /> consectetur adipiscing
+                  elit.
+                </p>
+              </div>
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+                <img src="/src/assets/icon2.png" alt="Icon" />
+                <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
+                  HIGH QUALITY BUILDS
+                </h5>
+                <p className="text-gray-600/90 font-normal tracking-normal">
+                  Lorem ipsum dolor sit amet, <br /> consectetur adipiscing
+                  elit.
+                </p>
+              </div>
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+                <img src="/src/assets/icon3.png" alt="Icon" />
+                <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
+                  EXPERT INTERIOR DESIGN
+                </h5>
+                <p className='className="text-gray-600/90 font-normal tracking-normal"'>
+                  Lorem ipsum dolor sit amet, <br /> consectetur adipiscing
+                  elit.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
