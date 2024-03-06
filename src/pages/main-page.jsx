@@ -31,7 +31,7 @@ function MainPage() {
       <section className="bg-gray-200/50 px-20 py-12">
         <div className="flex">
           <div className="w-2/5">
-            <h5 className="text-sm text-orange-600 tracking-wide font-semibold">
+            <h5 className="text-sm text-orange-600 tracking-widest font-normal">
               OUR GOAL
             </h5>
             <p className="text-gray-800/90 text-5xl tracking-wide">
@@ -64,7 +64,7 @@ function MainPage() {
       <section className="px-28 py-20">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col items-center justify-center text-center">
-            <h5 className="text-orange-600 tracking-wide font-normal">
+            <h5 className="text-orange-600 tracking-widest font-normal">
               OUR REQUIREMENTS
             </h5>
             <p className="text-gray-800/90 md:text-4xl text-md tracking-wide">
@@ -125,7 +125,7 @@ function MainPage() {
       <section className="md:px-20 px-2 py-12 bg-gray-100/90">
         <div>
           <div className="max-w-[600px]">
-            <h4 className="text-orange-600 tracking-wide font-normal">
+            <h4 className="text-orange-600 tracking-widest font-normal">
               CURRENT LISTINGS
             </h4>
             <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
@@ -142,7 +142,7 @@ function MainPage() {
               <Card key={product.id} product={product} />
             ))}
           </div>
-          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600">
+          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600 py-4">
             Show all listings <span>&#8594;</span>
           </p>
         </div>
@@ -150,7 +150,7 @@ function MainPage() {
       <section className="md:px-40 px-2 py-12">
         <div className="flex">
           <div className="w-2/5">
-            <h4 className="text-orange-600 tracking-wide font-normal">
+            <h4 className="text-orange-600 tracking-widest font-normal">
               OUR PEOPLE
             </h4>
             <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
@@ -218,13 +218,107 @@ function MainPage() {
                 <img src="/src/assets/avatar6.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
-                  Amanda Giovanni
+                    Amanda Giovanni
                   </h5>
                   <p className="text-gray-600/90 tracking-widest">REALTOR</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="md:px-20 px-2 py-12 bg-gray-100/90">
+        <div>
+          <div className="text-center">
+            <h1 className="text-orange-600 tracking-widest font-normal">
+              NEWSROOM
+            </h1>
+            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+              Writing from Estate.
+            </p>
+          </div>
+          <div className="flex flex-row gap-6 justify-center my-10">
+            <div className="w-96 h-96 cursor-pointer transition duration-300 hover:scale-105">
+              <div className="h-full bg-white rounded-md">
+                <div>
+                  <img
+                    src="/src/assets/news1.png"
+                    alt="Product"
+                    className="w-full"
+                  />
+                </div>
+                <div className="p-7">
+                  <div>
+                    <h4 className="text-md text-orange-600 tracking-wide font-thin">
+                      PRESS RELEASE
+                    </h4>
+                    <p className="py-4 font-md text-gray-800/90">
+                      Market watch: are condos still a good investment?
+                    </p>
+                    <span className="text-sm text-gray-600/90">
+                      August 12, 2023
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-96 h-96 cursor-pointer transition duration-300 hover:scale-105">
+              <div className="h-full bg-white rounded-md">
+                <div>
+                  <img
+                    src="/src/assets/news2.png"
+                    alt="Product"
+                    className="w-full"
+                  />
+                </div>
+                <div className="p-7">
+                  <div>
+                    <h4 className="text-md text-orange-600 tracking-wide font-thin">
+                      ANNOUNCEMENT
+                    </h4>
+                    <p className="py-4 font-md text-gray-800/90">
+                      The history of great design
+                    </p>
+                    <span className="text-sm text-gray-600/90">
+                      August 13, 2023
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-96 h-96 cursor-pointer transition duration-300 hover:scale-105">
+              <div className="h-full bg-white rounded-md">
+                <div>
+                  <img
+                    src="/src/assets/news3.png"
+                    alt="Product"
+                    className="w-full"
+                  />
+                </div>
+                <div className="p-7">
+                  <div>
+                    <h4 className="text-md text-orange-600 tracking-wide font-thin">
+                      COMPANY NEWS
+                    </h4>
+                    <p className="py-4 font-md text-gray-800/90">
+                      Designers who changed everything
+                    </p>
+                    <span className="text-sm text-gray-600/90">
+                      August 13, 2023
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600 py-4">
+            Newsroom <span>&#8594;</span>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          next
         </div>
       </section>
     </div>
