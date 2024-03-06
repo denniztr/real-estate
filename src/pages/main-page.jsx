@@ -122,9 +122,9 @@ function MainPage() {
           }}
         ></div>
       </section>
-      <section className="px-20 py-12 bg-gray-100/90">
-        <div className="">
-          <div className="w-[600px]">
+      <section className="md:px-20 px-2 py-12 bg-gray-100/90">
+        <div>
+          <div className="max-w-[600px]">
             <h4 className="text-orange-600 tracking-wide font-normal">
               CURRENT LISTINGS
             </h4>
@@ -137,16 +137,93 @@ function MainPage() {
               nisi ultrices, ut faucibus orci tincidunt.
             </p>
           </div>
-          <div className="py-4 flex flex-row flex-wrap justify-center gap-8">
+          <div className="p-4 flex flex-row flex-wrap justify-center gap-8">
             {products.map((product) => (
               <Card key={product.id} product={product} />
             ))}
-            {/* <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card /> */}
+          </div>
+          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600">
+            Show all listings <span>&#8594;</span>
+          </p>
+        </div>
+      </section>
+      <section className="md:px-40 px-2 py-12">
+        <div className="flex">
+          <div className="w-2/5">
+            <h4 className="text-orange-600 tracking-wide font-normal">
+              OUR PEOPLE
+            </h4>
+            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+              Meet our team of dedicated and <br /> talented agents.
+            </p>
+            <p className="py-4 text-gray-600/90 font-normal tracking-normal">
+              Morbi neque ex, condimentum dapibus congue et, vulputate ut
+              ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et
+              nisi ultrices, ut faucibus orci tincidunt.
+            </p>
+            <p className="text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600">
+              View our team <span>&#8594;</span>
+            </p>
+          </div>
+          <div className="w-4/5 pl-10 flex flex-row justify-around items-center">
+            <div className="">
+              <div className="flex flex-row gap-6 items-center">
+                <img src="/src/assets/avatar.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">
+                    David Sporer
+                  </h5>
+                  <p className="text-gray-600/90 tracking-widest">AGENT</p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-center py-6">
+                <img src="/src/assets/avatar2.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">Ava Orn</h5>
+                  <p className="text-gray-600/90 tracking-widest">
+                    Managing Broker
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-center">
+                <img src="/src/assets/avatar3.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">
+                    Ella Hessel
+                  </h5>
+                  <p className="text-gray-600/90 tracking-widest">AGENT</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-row gap-6 items-center">
+                <img src="/src/assets/avatar4.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">
+                    Daryl Gislason
+                  </h5>
+                  <p className="text-gray-600/90 tracking-widest">REALTOR</p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-center py-6">
+                <img src="/src/assets/avatar5.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">
+                    Trevor Torphy
+                  </h5>
+                  <p className="text-gray-600/90 tracking-widest">AGENT</p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-center">
+                <img src="/src/assets/avatar6.png" alt="Avatar" />
+                <div className="flex flex-col">
+                  <h5 className="text-gray-800/90 tracking-widest">
+                  Amanda Giovanni
+                  </h5>
+                  <p className="text-gray-600/90 tracking-widest">REALTOR</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
