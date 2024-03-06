@@ -1,6 +1,8 @@
 import Header from '../components/header/header';
 import Card from '../components/card/card';
 
+import { products } from '../data/product';
+
 function MainPage() {
   return (
     <div className="h-screen w-full">
@@ -136,12 +138,15 @@ function MainPage() {
             </p>
           </div>
           <div className="py-4 flex flex-row flex-wrap justify-center gap-8">
+            {products.map((product) => (
+              <Card key={product.id} product={product} />
+            ))}
+            {/* <Card />
             <Card />
             <Card />
             <Card />
             <Card />
-            <Card />
-            <Card />
+            <Card /> */}
           </div>
         </div>
       </section>

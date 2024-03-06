@@ -1,17 +1,18 @@
-function Card() {
+/* eslint-disable react/prop-types */
+function Card({product}) {
   return (
     <div className="w-96 h-96 cursor-pointer transition duration-300 hover:scale-105">
       <div className="h-full bg-white rounded-md">
         <div>
           <img
-            src="/src/assets/product1.png"
+            src={product.img}
             alt="Product"
             className="w-full"
           />
         </div>
         <div className="flex flex-col">
           <div className="py-4 text-center">
-            <h2 className="text-gray-600/90 tracking-widest">HOUSE</h2>
+            <h2 className="text-gray-600/90 tracking-widest">{product.type}</h2>
             <h5 className="text-gray-700/90 md:text-xl text-md tracking-normal font-semibold">
               California St.
             </h5>
@@ -23,7 +24,7 @@ function Card() {
                 src="/src/assets/Bed-Icon.svg"
                 alt="BedIcon"
               />
-              <p>16 beds</p>
+              <p>{product.beds} beds</p>
             </div>
             <div className="flex flex-row gap-1.5 text-sm text-gray-600/90 font-normal tracking-normal">
               <img
@@ -31,7 +32,7 @@ function Card() {
                 src="/src/assets/Bath-Icon.svg"
                 alt="BathIcon"
               />
-              <p>16 bathrooms</p>
+              <p>{product.baths} bathrooms</p>
             </div>
             <div className="flex flex-row gap-1.5 text-sm text-gray-600/90 font-normal tracking-normal">
               <img
@@ -39,7 +40,7 @@ function Card() {
                 src="/src/assets/Door-Icon.svg"
                 alt="DoorIcon"
               />
-              <p>11 rooms</p>
+              <p>{product.rooms} rooms</p>
             </div>
           </div>
         </div>
