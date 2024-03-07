@@ -67,7 +67,7 @@ function Footer() {
               </a>
             </ul>
           </div>
-          <div className="max-w-[450px]">
+          <div className="max-w-[450px] pl-10">
             <h4 className="text-sm text-orange-600 tracking-widest font-thin  pb-2">
               NEWSLETTER
             </h4>
@@ -88,22 +88,22 @@ function Footer() {
                 <img
                   className="cursor-pointer"
                   src="/src/assets/in.svg"
-                  alt=""
+                  alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
                   src="/src/assets/facebook.svg"
-                  alt=""
+                  alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
                   src="/src/assets/inst.svg"
-                  alt=""
+                  alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
                   src="/src/assets/twitter.svg"
-                  alt=""
+                  alt="Icon"
                 />
               </div>
             </div>

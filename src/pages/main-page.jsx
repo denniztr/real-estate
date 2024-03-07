@@ -5,9 +5,35 @@ import Footer from '../components/footer/footer';
 import { products } from '../data/product';
 
 function MainPage() {
+
+  const scrollToListings = () => {
+    const listings = document.getElementById('listings');
+    listings.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToNewsroom = () => {
+    const newsroom = document.getElementById('newsroom');
+    newsroom.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    const contacts = document.getElementById('contacts');
+    contacts.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToTeam = () => {
+    const team = document.getElementById('team');
+    team.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="h-screen w-full">
-      <Header />
+      <Header
+        scrollToListings={scrollToListings}
+        scrollToNewsroom={scrollToNewsroom}
+        scrollToContact={scrollToContact}
+        scrollToTeam={scrollToTeam}
+      />
       <section className="h-[700px] relative">
         <div
           className="bg-cover bg-no-repeat w-full h-full bg-white opacity-40"
@@ -58,7 +84,16 @@ function MainPage() {
                 sem vitae risus tristique posuere.
               </p>
             </div>
-            <div>Avatarka</div>
+            <div className="flex flex-row gap-4 mt-6 items-center">
+              <img
+                className="w-10 h-10"
+                src="/src/assets/avatar2.png"
+                alt="Avatar"
+              />
+              <span className="font-normal text-gray-700 text-md">
+                Nate Davidsson
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -124,7 +159,7 @@ function MainPage() {
         ></div>
       </section>
       <section className="md:px-20 px-2 py-12 bg-gray-100/90">
-        <div>
+        <div id="listings">
           <div className="max-w-[600px]">
             <h4 className="text-orange-600 tracking-widest font-normal">
               CURRENT LISTINGS
@@ -148,7 +183,7 @@ function MainPage() {
           </p>
         </div>
       </section>
-      <section className="md:px-40 px-2 py-12">
+      <section className="md:px-40 px-2 py-12" id="team">
         <div className="flex">
           <div className="w-2/5">
             <h4 className="text-orange-600 tracking-widest font-normal">
@@ -229,7 +264,7 @@ function MainPage() {
         </div>
       </section>
       <section className="md:px-20 px-2 py-12 bg-gray-100/90">
-        <div>
+        <div id="newsroom">
           <div className="text-center">
             <h1 className="text-orange-600 tracking-widest font-normal">
               NEWSROOM
@@ -386,9 +421,11 @@ function MainPage() {
             </div>
           </div>
         </div>
-        здесь нужно починить скролл с отзывами
       </section>
-      <section className="bg-gray-800/90 py-24 text-center flex flex-col items-center justify-center">
+      <section
+        className="bg-gray-800/90 py-24 text-center flex flex-col items-center justify-center"
+        id="contacts"
+      >
         <h4 className="text-white text-sm font-thin tracking-wider">
           Seen enough?
         </h4>
