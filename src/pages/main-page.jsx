@@ -1,5 +1,6 @@
 import Header from '../components/header/header';
 import Card from '../components/card/card';
+import Footer from '../components/footer/footer';
 
 import { products } from '../data/product';
 
@@ -316,11 +317,94 @@ function MainPage() {
           </p>
         </div>
       </section>
-      <section>
+      <section className="md:px-20 px-2 py-12">
         <div>
-          next
+          <div>
+            <h4 className="text-orange-600 tracking-widest font-normal">
+              TESTIMONIALS
+            </h4>
+            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+              What our customers say.
+            </p>
+          </div>
+          <div className="py-10 flex flex-row gap-6">
+            <div className="p-6 w-[580px] border-[1px]">
+              <h2 className="text-gray-800/90 pb-4 text-xl tracking-normal font-semibold">
+                We found the perfect home!
+              </h2>
+              <p className="text-sm text-gray-600/90 font-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                tristique posuere.
+              </p>
+              <div className="flex flex-row gap-2 mt-6">
+                <hr className=" w-0.5 h-5 bg-orange-500" />
+                <span className="font-normal text-gray-900 text-sm">
+                  Nate Davidsson
+                </span>
+              </div>
+            </div>
+            <div className="p-6 w-[580px] border-[1px]">
+              <h2 className="text-gray-800/90 pb-4 text-xl tracking-normal font-semibold">
+                We are so happy with Estate.
+              </h2>
+              <p className="text-sm text-gray-600/90 font-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet.
+              </p>
+              <div className="flex flex-row gap-2 mt-6">
+                <hr className=" w-0.5 h-5 bg-orange-500" />
+                <span className="font-normal text-gray-900 text-sm">
+                  Laura Paulie
+                </span>
+              </div>
+            </div>
+            <div className="p-6 w-[580px] border-[1px]">
+              <h2 className="text-gray-800/90 pb-4 text-xl tracking-normal font-semibold">
+                We found the perfect home!
+              </h2>
+              <p className="text-sm text-gray-600/90 font-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                tristique posuere.
+              </p>
+              <div className="flex flex-row gap-2 mt-6">
+                <hr className=" w-0.5 h-5 bg-orange-500" />
+                <span className="font-normal text-gray-900 text-sm">
+                  Nate Davidsson
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        здесь нужно починить скролл с отзывами
+      </section>
+      <section className="bg-gray-800/90 py-24 text-center flex flex-col items-center justify-center">
+        <h4 className="text-white text-sm font-thin tracking-wider">
+          Seen enough?
+        </h4>
+        <h5 className="text-white text-4xl">Get in touch with us today.</h5>
+        <p className="text-white py-6">
+          Morbi neque ex, condimentum dapibus congue et, vulputate ut <br />
+          {''}
+          ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et <br />{' '}
+          nisi ultrices, ut faucibus orci tincidunt.
+        </p>
+        <div className="flex flex-row gap-6">
+          <button className="bg-white py-2 px-4 rounded">Contact</button>
+          <button className="bg-white py-2 px-4 rounded">See listings</button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

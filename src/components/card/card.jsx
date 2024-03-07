@@ -14,7 +14,7 @@ function Card({product}) {
           <div className="py-4 text-center">
             <h2 className="text-gray-600/90 tracking-widest">{product.type}</h2>
             <h5 className="text-gray-700/90 md:text-xl text-md tracking-normal font-semibold">
-              California St.
+              {product.address}
             </h5>
           </div>
           <div className="flex flex-row gap-4 justify-center">
