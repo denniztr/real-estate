@@ -53,7 +53,7 @@ function Header({
         <div>
           <div className="flex flex-row gap-2 items-center">
             <img
-              src="/src/assets/logo.svg"
+              src="/public/logo.svg"
               alt="Logo"
               className="w-8 h-8 cursor-pointer"
               onClick={() => scrollToTop()}
