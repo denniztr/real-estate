@@ -6,7 +6,7 @@ function Footer({ scrollToTop }) {
         <div className="flex flex-row items-end">
           <img
             className="cursor-pointer"
-            src="/public/logoFooter.svg"
+            src="/logoFooter.svg"
             alt="Logo"
             onClick={() => scrollToTop()}
           />
@@ -93,22 +93,22 @@ function Footer({ scrollToTop }) {
               <div className="flex flex-row gap-4 absolute right-0 pt-10">
                 <img
                   className="cursor-pointer"
-                  src="/public/in.svg"
+                  src="/in.svg"
                   alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
-                  src="/public/facebook.svg"
+                  src="/facebook.svg"
                   alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
-                  src="/public/inst.svg"
+                  src="/inst.svg"
                   alt="Icon"
                 />
                 <img
                   className="cursor-pointer"
-                  src="/public/twitter.svg"
+                  src="/twitter.svg"
                   alt="Icon"
                 />
               </div>

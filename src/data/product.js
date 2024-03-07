@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    img: '/public/product1.png',
+    img: '/product1.png',
     type: 'HOUSE',
     address: 'California St.',
     beds: '16',
@@ -10,7 +10,7 @@ export const products = [
   },
   {
     id: 2,
-    img: '/public/product2.png',
+    img: '/product2.png',
     type: 'VILLA',
     address: 'Welford Gardens',
     beds: '12',
@@ -19,7 +19,7 @@ export const products = [
   },
   {
     id: 3,
-    img: '/public/product3.png',
+    img: '/product3.png',
     type: 'HOUSE',
     address: 'The Grove',
     beds: '12',
@@ -28,7 +28,7 @@ export const products = [
   },
   {  
     id: 4,
-    img: '/public/product4.png',
+    img: '/product4.png',
     type: 'APARTMENT',
     address: 'Wallace St.',
     beds: '10',
@@ -37,7 +37,7 @@ export const products = [
   },
   {
     id: 5,
-    img: '/public/product6.png',
+    img: '/product6.png',
     type: 'APARTMENT',
     address: 'Dwight Way',
     beds: '8',
@@ -46,7 +46,7 @@ export const products = [
   },
   {
     id: 6,
-    img: '/public/product7.png',
+    img: '/product7.png',
     type: 'HOUSE',
     address: 'North Avenue',
     beds: '14',

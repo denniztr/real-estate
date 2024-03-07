@@ -43,12 +43,12 @@ function MainPage() {
         <div
           className="bg-cover bg-no-repeat w-full h-full bg-white opacity-40"
           style={{
-            backgroundImage: "url('/public/background-top.png')",
+            backgroundImage: "url('/background-top.png')",
           }}
         ></div>
         <div className="flex flex-col gap-4 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2">
           <div className="flex flex-col items-center">
-            <img src="/public/logo.svg" alt="Logo" className="w-16 h-16" />
+            <img src="/logo.svg" alt="Logo" className="w-16 h-16" />
             <span className="text-5xl text-gray-700 font-bold tracking-wide">
               Estate
             </span>
@@ -95,7 +95,7 @@ function MainPage() {
             <div className="flex flex-row gap-4 mt-6 items-center">
               <img
                 className="w-10 h-10"
-                src="/public/avatar2.png"
+                src="/avatar2.png"
                 alt="Avatar"
               />
               <span className="font-normal text-gray-700 text-md">
@@ -121,11 +121,11 @@ function MainPage() {
           </div>
           <div className="flex flex-row flex-wrap gap-16 py-10">
             <div className="px-2">
-              <img src="/public/img.png" alt="Image" />
+              <img src="/img.png" alt="Image" />
             </div>
             <div className="flex flex-col justify-around md:w-auto w-full px-4">
               <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600 active:bg-gray-200 active:border-gray-600">
-                <img src="/public/icon1.png" alt="Icon" />
+                <img src="/icon1.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   STELLAR LOCATIONS
                 </h5>
@@ -135,7 +135,7 @@ function MainPage() {
                 </p>
               </div>
               <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 active:bg-gray-200 active:border-gray-600">
-                <img src="/public/icon2.png" alt="Icon" />
+                <img src="/icon2.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   HIGH QUALITY BUILDS
                 </h5>
@@ -145,7 +145,7 @@ function MainPage() {
                 </p>
               </div>
               <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600 active:bg-gray-200 active:border-gray-600">
-                <img src="/public/icon3.png" alt="Icon" />
+                <img src="/icon3.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   EXPERT INTERIOR DESIGN
                 </h5>
@@ -162,7 +162,7 @@ function MainPage() {
         <div
           className="bg-cover bg-no-repeat w-full h-full"
           style={{
-            backgroundImage: "url('/public/background-middle.png')",
+            backgroundImage: "url('/background-middle.png')",
           }}
         ></div>
       </section>
@@ -212,7 +212,7 @@ function MainPage() {
           <div className="md:w-4/5 pl-10 flex flex-row flex-wrap justify-around items-center">
             <div className="">
               <div className="flex flex-row gap-6 items-center">
-                <img src="/public/avatar.png" alt="Avatar" />
+                <img src="/avatar.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
                     David Sporer
@@ -221,7 +221,7 @@ function MainPage() {
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-center py-6">
-                <img src="/public/avatar2.png" alt="Avatar" />
+                <img src="/avatar2.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">Ava Orn</h5>
                   <p className="text-gray-600/90 tracking-widest">
@@ -230,7 +230,7 @@ function MainPage() {
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-center">
-                <img src="/public/avatar3.png" alt="Avatar" />
+                <img src="/avatar3.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
                     Ella Hessel
@@ -241,7 +241,7 @@ function MainPage() {
             </div>
             <div>
               <div className="flex flex-row gap-6 items-center">
-                <img src="/public/avatar4.png" alt="Avatar" />
+                <img src="/avatar4.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
                     Daryl Gislason
@@ -250,7 +250,7 @@ function MainPage() {
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-center py-6">
-                <img src="/public/avatar5.png" alt="Avatar" />
+                <img src="/avatar5.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
                     Trevor Torphy
@@ -259,7 +259,7 @@ function MainPage() {
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-center">
-                <img src="/public/avatar6.png" alt="Avatar" />
+                <img src="/avatar6.png" alt="Avatar" />
                 <div className="flex flex-col">
                   <h5 className="text-gray-800/90 tracking-widest">
                     Amanda Giovanni
@@ -289,7 +289,7 @@ function MainPage() {
               <div className="h-full bg-white rounded-md">
                 <div>
                   <img
-                    src="/public/news1.png"
+                    src="/news1.png"
                     alt="Product"
                     className="w-full"
                   />
@@ -313,7 +313,7 @@ function MainPage() {
               <div className="h-full bg-white rounded-md">
                 <div>
                   <img
-                    src="/public/news2.png"
+                    src="/news2.png"
                     alt="Product"
                     className="w-full"
                   />
@@ -337,7 +337,7 @@ function MainPage() {
               <div className="h-full bg-white rounded-md">
                 <div>
                   <img
-                    src="/public/news3.png"
+                    src="/news3.png"
                     alt="Product"
                     className="w-full"
                   />

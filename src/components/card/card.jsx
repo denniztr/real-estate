@@ -21,7 +21,7 @@ function Card({product}) {
             <div className="flex flex-row gap-1.5 text-sm text-gray-600/90 font-normal tracking-normal">
               <img
                 className="w-5 h-5"
-                src="/public/Bed-Icon.svg"
+                src="/Bed-Icon.svg"
                 alt="BedIcon"
               />
               <p>{product.beds} beds</p>
@@ -29,7 +29,7 @@ function Card({product}) {
             <div className="flex flex-row gap-1.5 text-sm text-gray-600/90 font-normal tracking-normal">
               <img
                 className="w-5 h-5"
-                src="/public/Bath-Icon.svg"
+                src="/Bath-Icon.svg"
                 alt="BathIcon"
               />
               <p>{product.baths} bathrooms</p>
@@ -37,7 +37,7 @@ function Card({product}) {
             <div className="flex flex-row gap-1.5 text-sm text-gray-600/90 font-normal tracking-normal">
               <img
                 className="w-5 h-5"
-                src="/public/Door-Icon.svg"
+                src="/Door-Icon.svg"
                 alt="DoorIcon"
               />
               <p>{product.rooms} rooms</p>
