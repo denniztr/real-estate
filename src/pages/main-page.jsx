@@ -358,7 +358,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600 py-4">
+          <p className="text-center text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600 md:py-4 py-0">
             Newsroom <span>&#8594;</span>
           </p>
         </div>

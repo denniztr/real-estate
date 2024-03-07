@@ -18,19 +18,19 @@ function Footer({ scrollToTop }) {
               PAGES
             </h4>
             <ul className="text-white font-thin flex flex-col gap-1">
-              <a href="">
+              <a href="#">
                 <li>Start</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Listing</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Listings alt. 2</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Contact</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Legal</li>
               </a>
             </ul>
@@ -40,13 +40,13 @@ function Footer({ scrollToTop }) {
               COMPANY
             </h4>
             <ul className="text-white font-thin  flex flex-col gap-1">
-              <a href="">
+              <a href="#">
                 <li>About</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Our team</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Newsroom</li>
               </a>
             </ul>
@@ -56,19 +56,19 @@ function Footer({ scrollToTop }) {
               UTILITY
             </h4>
             <ul className="text-white font-thin  flex flex-col gap-1">
-              <a href="">
+              <a href="#">
                 <li>Instructions</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Style guide</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Licenses</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>Changelog</li>
               </a>
-              <a href="">
+              <a href="#">
                 <li>404</li>
               </a>
             </ul>

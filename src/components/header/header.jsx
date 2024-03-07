@@ -32,14 +32,22 @@ function Header({
     setIsOpen(!isOpen);
   };
 
+  const handleMenuClick = (scrollFunction, event) => {
+    event.preventDefault();
+    setIsOpen(false);
+    setTimeout(() => {
+      scrollFunction();
+    }, 0.1); // Установите задержку, равную времени анимации закрытия хедера
+  };
+
   return (
     <motion.header
-      className={`w-full bg-white drop-shadow-sm md:block fixed z-50 top-0 ${
+      className={`w-full bg-white drop-shadow-sm md:block fixed z-50 top-0 opacity-95 ${
         visible ? '' : 'hidden'
       }`}
       initial={{ y: 0 }}
       animate={{ y: visible ? 0 : -100 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="py-4 md:px-36 px-4 flex flex-row justify-between">
         <div>
@@ -92,9 +100,8 @@ function Header({
         >
           <nav className="flex flex-row gap-8 justify-center">
             <a
-              onClick={() => {
-                scrollToListings();
-                setIsOpen(false);
+              onClick={(event) => {
+                handleMenuClick(scrollToListings, event);
               }}
               className="text-md font-semibold tracking-wide"
               href="#"
@@ -102,9 +109,8 @@ function Header({
               Listings
             </a>
             <a
-              onClick={() => {
-                scrollToNewsroom();
-                setIsOpen(false);
+              onClick={(event) => {
+                handleMenuClick(scrollToNewsroom, event);
               }}
               className="text-md font-semibold tracking-wide"
               href="#"
@@ -112,9 +118,8 @@ function Header({
               Newsroom
             </a>
             <a
-              onClick={() => {
-                scrollToContact();
-                setIsOpen(false);
+              onClick={(event) => {
+                handleMenuClick(scrollToContact, event);
               }}
               className="text-md font-semibold tracking-wide"
               href="#"
@@ -122,9 +127,8 @@ function Header({
               Contact
             </a>
             <a
-              onClick={() => {
-                scrollToTeam();
-                setIsOpen(false);
+              onClick={(event) => {
+                handleMenuClick(scrollToTeam, event);
               }}
               className="text-md font-semibold tracking-wide"
               href="#"
