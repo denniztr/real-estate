@@ -1,17 +1,61 @@
 /* eslint-disable react/prop-types */
-function Header({ scrollToListings, scrollToNewsroom, scrollToContact, scrollToTeam }) {
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Menu } from '../mob-menu/menu';
+
+function Header({
+  scrollToListings,
+  scrollToNewsroom,
+  scrollToContact,
+  scrollToTeam,
+  scrollToTop,
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="w-full bg-white drop-shadow-sm">
+    <motion.header
+      className={`w-full bg-white drop-shadow-sm md:block fixed z-50 top-0 ${
+        visible ? '' : 'hidden'
+      }`}
+      initial={{ y: 0 }}
+      animate={{ y: visible ? 0 : -100 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="py-4 md:px-36 px-4 flex flex-row justify-between">
         <div>
           <div className="flex flex-row gap-2 items-center">
-            <img src="/src/assets/logo.svg" alt="Logo" className="w-8 h-8" />
+            <img
+              src="/src/assets/logo.svg"
+              alt="Logo"
+              className="w-8 h-8 cursor-pointer"
+              onClick={() => scrollToTop()}
+            />
             <span className="text-md text-black tracking-tight font-semibold">
               Estate
             </span>
           </div>
         </div>
-        <nav className="flex flex-row flex-nowrap gap-12 text-sm items-center">
+        <nav className="hidden md:flex flex-row flex-nowrap gap-12 text-sm items-center">
           <a
             className="transition duration-200 hover:text-orange-600/90 cursor-pointer"
             onClick={() => scrollToListings()}
@@ -37,8 +81,60 @@ function Header({ scrollToListings, scrollToNewsroom, scrollToContact, scrollToT
             Our team
           </a>
         </nav>
+        <Menu handleClick={handleClick} />
       </div>
-    </header>
+      {isOpen && (
+        <motion.div
+          className="p-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <nav className="flex flex-row gap-8 justify-center">
+            <a
+              onClick={() => {
+                scrollToListings();
+                setIsOpen(false);
+              }}
+              className="text-md font-semibold tracking-wide"
+              href="#"
+            >
+              Listings
+            </a>
+            <a
+              onClick={() => {
+                scrollToNewsroom();
+                setIsOpen(false);
+              }}
+              className="text-md font-semibold tracking-wide"
+              href="#"
+            >
+              Newsroom
+            </a>
+            <a
+              onClick={() => {
+                scrollToContact();
+                setIsOpen(false);
+              }}
+              className="text-md font-semibold tracking-wide"
+              href="#"
+            >
+              Contact
+            </a>
+            <a
+              onClick={() => {
+                scrollToTeam();
+                setIsOpen(false);
+              }}
+              className="text-md font-semibold tracking-wide"
+              href="#"
+            >
+              Our team
+            </a>
+          </nav>
+        </motion.div>
+      )}
+    </motion.header>
   );
 }
 

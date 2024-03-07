@@ -1,12 +1,18 @@
-function Footer() {
+/* eslint-disable react/prop-types */
+function Footer({ scrollToTop }) {
   return (
-    <footer className="bg-gray-900 py-24 px-32">
-      <div className="flex flex-col items-center">
+    <footer className="bg-gray-900 py-24 md:px-32 px-10">
+      <div className="flex flex-col items-center pb-16">
         <div className="flex flex-row items-end">
-          <img src="/src/assets/logoFooter.svg" alt="Logo" />
-          <h1 className="text-white font-semibold text-2xl">Estate</h1>
+          <img
+            className="cursor-pointer"
+            src="/src/assets/logoFooter.svg"
+            alt="Logo"
+            onClick={() => scrollToTop()}
+          />
+          <h1 className="text-white font-semibold text-2xl pl-4">Estate</h1>
         </div>
-        <div className="flex flex-row gap-24 pt-16">
+        <div className="flex flex-row flex-wrap justify-center md:gap-24 gap-10 pt-16 ">
           <div>
             <h4 className="text-sm text-orange-600 tracking-widest font-thin pb-2">
               PAGES
@@ -67,7 +73,7 @@ function Footer() {
               </a>
             </ul>
           </div>
-          <div className="max-w-[450px] pl-10">
+          <div className="max-w-[450px] md:pl-10 ">
             <h4 className="text-sm text-orange-600 tracking-widest font-thin  pb-2">
               NEWSLETTER
             </h4>

@@ -5,7 +5,6 @@ import Footer from '../components/footer/footer';
 import { products } from '../data/product';
 
 function MainPage() {
-
   const scrollToListings = () => {
     const listings = document.getElementById('listings');
     listings.scrollIntoView({ behavior: 'smooth' });
@@ -26,13 +25,19 @@ function MainPage() {
     team.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToTop = () => {
+    const top = document.getElementById('top');
+    top.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full" id="top">
       <Header
         scrollToListings={scrollToListings}
         scrollToNewsroom={scrollToNewsroom}
         scrollToContact={scrollToContact}
         scrollToTeam={scrollToTeam}
+        scrollToTop={scrollToTop}
       />
       <section className="h-[700px] relative">
         <div
@@ -55,19 +60,22 @@ function MainPage() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-200/50 px-20 py-12">
-        <div className="flex">
-          <div className="w-2/5">
+      <section className="bg-gray-200/50 md:px-20 py-12">
+        <div className="flex flex-wrap pb-8">
+          <div className="md:w-2/5 w-full px-2">
             <h5 className="text-sm text-orange-600 tracking-widest font-normal">
               OUR GOAL
             </h5>
-            <p className="text-gray-800/90 text-5xl tracking-wide">
+            <p className="hidden mb:block text-gray-800/90 tracking-wide text-xl  md:text-5xl md:font-normal font-semibold">
               We are dedicated <br /> to finding a house <br /> that you will
               love.
             </p>
+            <p className="mb:hidden md:text-5xl block w-full text-gray-800/90 tracking-wide text-xl md:font-normal font-semibold py-2">
+              We are dedicated to finding a house <br /> that you will love.
+            </p>
           </div>
-          <div className="w-3/5">
-            <div className="mb-10">
+          <div className="md:w-3/5 w-full p-2">
+            <div className="my-6">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
@@ -97,13 +105,13 @@ function MainPage() {
           </div>
         </div>
       </section>
-      <section className="px-28 py-20">
+      <section className="md:px-28 md:py-20 py-12">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col items-center justify-center text-center">
             <h5 className="text-orange-600 tracking-widest font-normal">
               OUR REQUIREMENTS
             </h5>
-            <p className="text-gray-800/90 md:text-4xl text-md tracking-wide">
+            <p className="w-full text-gray-800/90 tracking-wide text-xl md:font-normal font-semibold py-2">
               How we choose our listings.
             </p>
             <p className="py-4 text-xl text-gray-600/90 font-normal tracking-normal">
@@ -112,11 +120,11 @@ function MainPage() {
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-16 py-10">
-            <div>
+            <div className="px-2">
               <img src="/src/assets/img.png" alt="Image" />
             </div>
-            <div className="flex flex-col justify-around">
-              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+            <div className="flex flex-col justify-around md:w-auto w-full px-4">
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600 active:bg-gray-200 active:border-gray-600">
                 <img src="/src/assets/icon1.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   STELLAR LOCATIONS
@@ -126,7 +134,7 @@ function MainPage() {
                   elit.
                 </p>
               </div>
-              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200">
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 active:bg-gray-200 active:border-gray-600">
                 <img src="/src/assets/icon2.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   HIGH QUALITY BUILDS
@@ -136,7 +144,7 @@ function MainPage() {
                   elit.
                 </p>
               </div>
-              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600">
+              <div className="cursor-pointer p-6 rounded transition  duration-300 hover:bg-gray-200 hover:border-gray-600 active:bg-gray-200 active:border-gray-600">
                 <img src="/src/assets/icon3.png" alt="Icon" />
                 <h5 className="text-gray-800/90 tracking-wider font-semibold pt-4">
                   EXPERT INTERIOR DESIGN
@@ -150,7 +158,7 @@ function MainPage() {
           </div>
         </div>
       </section>
-      <section className="h-[700px]">
+      <section className="hidden md:block h-[700px]">
         <div
           className="bg-cover bg-no-repeat w-full h-full"
           style={{
@@ -158,13 +166,13 @@ function MainPage() {
           }}
         ></div>
       </section>
-      <section className="md:px-20 px-2 py-12 bg-gray-100/90">
-        <div id="listings">
+      <section className="md:px-20 px-2 py-12 bg-gray-100/90" id="listings">
+        <div>
           <div className="max-w-[600px]">
             <h4 className="text-orange-600 tracking-widest font-normal">
               CURRENT LISTINGS
             </h4>
-            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+            <p className="w-full text-gray-800/90 tracking-wide text-xl md:text-4xl md:font-normal font-semibold py-2">
               What we have in store for you.
             </p>
             <p className="py-4 text-gray-600/90 font-normal tracking-normal">
@@ -184,12 +192,12 @@ function MainPage() {
         </div>
       </section>
       <section className="md:px-40 px-2 py-12" id="team">
-        <div className="flex">
-          <div className="w-2/5">
+        <div className="flex flex-wrap md:flex-nowrap">
+          <div className="md:w-2/5 pb-8 px-2">
             <h4 className="text-orange-600 tracking-widest font-normal">
               OUR PEOPLE
             </h4>
-            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+            <p className="w-full text-gray-800/90 tracking-wide text-xl md:text-4xl md:font-normal font-semibold py-2">
               Meet our team of dedicated and <br /> talented agents.
             </p>
             <p className="py-4 text-gray-600/90 font-normal tracking-normal">
@@ -197,11 +205,11 @@ function MainPage() {
               ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et
               nisi ultrices, ut faucibus orci tincidunt.
             </p>
-            <p className="text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600">
+            <p className="hidden md:block text-gray-600/90 tracking-widest cursor-pointer transition hover:text-gray-600">
               View our team <span>&#8594;</span>
             </p>
           </div>
-          <div className="w-4/5 pl-10 flex flex-row justify-around items-center">
+          <div className="md:w-4/5 pl-10 flex flex-row flex-wrap justify-around items-center">
             <div className="">
               <div className="flex flex-row gap-6 items-center">
                 <img src="/src/assets/avatar.png" alt="Avatar" />
@@ -259,21 +267,24 @@ function MainPage() {
                   <p className="text-gray-600/90 tracking-widest">REALTOR</p>
                 </div>
               </div>
+              <p className="md:hidden block text-gray-600/90 text-center py-8 pb-0 tracking-widest cursor-pointer transition hover:text-gray-600">
+                View our team <span>&#8594;</span>
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="md:px-20 px-2 py-12 bg-gray-100/90">
+      <section className=" md:px-20 px-2 py-12 bg-gray-100/90">
         <div id="newsroom">
           <div className="text-center">
             <h1 className="text-orange-600 tracking-widest font-normal">
               NEWSROOM
             </h1>
-            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+            <p className="w-full text-gray-800/90 tracking-wide text-xl md:text-4xl md:font-normal font-semibold py-2">
               Writing from Estate.
             </p>
           </div>
-          <div className="flex flex-row gap-6 justify-center my-10">
+          <div className="flex flex-row flex-wrap gap-6 justify-center my-10">
             <div className="w-96 h-96 cursor-pointer transition duration-300 hover:scale-105">
               <div className="h-full bg-white rounded-md">
                 <div>
@@ -354,15 +365,15 @@ function MainPage() {
       </section>
       <section className="md:px-20 px-2 py-12">
         <div>
-          <div>
+          <div className="px-2">
             <h4 className="text-orange-600 tracking-widest font-normal">
               TESTIMONIALS
             </h4>
-            <p className="text-gray-800/90 md:text-4xl text-md tracking-normal">
+            <p className="w-full text-gray-800/90 tracking-wide text-xl md:text-4xl md:font-normal font-semibold py-2">
               What our customers say.
             </p>
           </div>
-          <div className="py-10 flex flex-row gap-6">
+          <div className="py-10 flex flex-row flex-wrap gap-6">
             <div className="p-6 w-[580px] border-[1px]">
               <h2 className="text-gray-800/90 pb-4 text-xl tracking-normal font-semibold">
                 We found the perfect home!
@@ -400,25 +411,6 @@ function MainPage() {
                 </span>
               </div>
             </div>
-            <div className="p-6 w-[580px] border-[1px]">
-              <h2 className="text-gray-800/90 pb-4 text-xl tracking-normal font-semibold">
-                We found the perfect home!
-              </h2>
-              <p className="text-sm text-gray-600/90 font-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique. Duis
-                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                commodo diam libero vitae erat. Aenean faucibus nibh et justo
-                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
-                tristique posuere.
-              </p>
-              <div className="flex flex-row gap-2 mt-6">
-                <hr className=" w-0.5 h-5 bg-orange-500" />
-                <span className="font-normal text-gray-900 text-sm">
-                  Nate Davidsson
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -429,19 +421,21 @@ function MainPage() {
         <h4 className="text-white text-sm font-thin tracking-wider">
           Seen enough?
         </h4>
-        <h5 className="text-white text-4xl">Get in touch with us today.</h5>
-        <p className="text-white py-6">
+        <h5 className="text-white text-4xl md:px-0 px-2">
+          Get in touch with us today.
+        </h5>
+        <p className="md:block mb:py-6 hidden text-white py-10">
           Morbi neque ex, condimentum dapibus congue et, vulputate ut <br />
           {''}
           ligula. Vestibulum sit amet urna turpis. Mauris euismod elit et <br />{' '}
           nisi ultrices, ut faucibus orci tincidunt.
         </p>
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-6 pt-10 md:pt-0">
           <button className="bg-white py-2 px-4 rounded">Contact</button>
           <button className="bg-white py-2 px-4 rounded">See listings</button>
         </div>
       </section>
-      <Footer />
+      <Footer scrollToTop={scrollToTop} />
     </div>
   );
 }
